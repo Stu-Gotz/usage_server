@@ -3,7 +3,7 @@ const app = express();
 const pool = require("./db.js"); //stores super secret db info
 const cors = require("cors")
 const path = require("path")
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5500
 
 // middleware
 app.use(cors());
@@ -35,10 +35,6 @@ app.get("data/:date/:tier", async (req, res) => {
     };
 });
 // that's it. It only does a 'get'
-
-app.get("*", (req, res) =>{
-    res.sendFile(path.join(__dirname, "index.html"))
-});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}.`);
