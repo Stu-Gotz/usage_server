@@ -15,7 +15,6 @@ if (process.env.NODE_ENV === "production") {
 /* ROUTES */
 
 // get the data
-
 app.get("data/:date/:tier", async (req, res) => {
     try {
         const { date, tier } = req.params;
