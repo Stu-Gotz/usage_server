@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'dank mono';
+    font-size: 1.6rem;
+    font-style: italic;
+    height: 100%;
+    width: 100%;
+    background-color: #634b9b;
+    opacity: .7;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 5% 40%;
+}
+
+.text {
+    text-shadow: .1rem;
+}
