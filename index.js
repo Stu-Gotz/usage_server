@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 5500
 app.use(cors());
 app.use(express.json()); // => req.body
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("/"))
-}
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(""))
+// }
 /* ROUTES */
 
 // get the data
