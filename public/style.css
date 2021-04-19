@@ -20,6 +20,23 @@ body {
     opacity: .7;
 }
 
+code {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-style: none;
+}
+
+a,
+a::before,
+a::after,
+a:visited {
+    font-style: none;
+    color: #c5eb5c
+}
+
+a:hover {
+    color: #333
+}
 .greeting {
     display: flex;
     align-items: center;
