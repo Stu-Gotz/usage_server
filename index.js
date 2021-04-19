@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json()); // => req.body
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "/")))
+    app.use(express.static("/"))
 }
 /* ROUTES */
 
