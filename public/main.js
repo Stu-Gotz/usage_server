@@ -25,6 +25,7 @@ async function fetchAPI() {
 
   const url = `${baseURL}/${date}/${tier}`;
 
+  window.open(url, '_blank').focus();
   const res = await fetch(url);
 
   const data = await res.json();
