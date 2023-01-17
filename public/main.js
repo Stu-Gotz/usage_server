@@ -1,13 +1,12 @@
-function fetchAPI(event) {
-  event.preventDefault();
-  
+let data = {}
+
+function fetchAPI() {
+  data = {}
   const baseURL = "https://usage-server.herokuapp.com/data"
   const date = document.getElementById("date-input").value;
   const tier = document.getElementById("tier-input").value;
 
-  fetch(`${baseURL}/${date}/${tier}`)
-  .then(response => response.json())
-  .then(data => document.getElementById("main-text").innerText = data);
+  window.location.replace(`${baseURL}/${date}/${tier}`)
 }
 
 function resetForm(){
