@@ -11,30 +11,40 @@
 </head>
 <body>
   <header class="header">
-    <a href="./index.html"><img class="header-image" src="./images/pngegg.png" alt="koffing" height="150" width="150"></a>
+    <a href="./"><img class="header-image" src="./images/pngegg.png" alt="koffing" height="150" width="150"></a>
   </header>
   <div class="greeting" id="main-text">
-    <div class="text">
-      Hello. This is a usage stats server for Smogon data. 
+    <div class="wrapper">
+
+    
+    <div class="text-container">
+      <p class="text">Hello. This is a usage stats server for Smogon data. 
       Please don't hammer it, I'm paying out of pocket. 
       I will work on some way to allow cloning of the data. 
       For now, please use the repo for the 
-      database and the web-scraping   
-      <a href="https://github.com/Stu-Gotz/smog_usage_stats">here</a> 
-      you should hopefully just have to press run twice in the
+      database and the web-scraping 
+      <a href="https://github.com/Stu-Gotz/smog_usage_stats">here</a>. 
+      You should hopefully just have to press run twice in the
       two Python files (<code>DBManager.py</code> and <code>smogon_pull.py</code>).
       You'll have to set it up yourself but if you don't 
       know basic DB stuff, and want to be a better programmer 
       it's a good skill to have to at least be able to 
-      speak confidently in an interview. 
-      <br>
-      <br>
+      speak confidently in an interview.</p>
+      
+      <p class="text">If you want to help me develop this to be better (volunteering) 
+      feel free to submit a pull request and I'll get to it when I get to it.
+      This is the first thing I've developed, and I might use it for a school 
+      project, so depending on if I do or don't I'm willing to accept contributions.
+      Otherwise, feel free to play around with it and make any improvements you can see,
+      and I'll reach out to you after the deadline has passed.</p>
+      <p class="text">
+        If you somehow use this a lot and want to support a starving artist, 
+        feel free to send me some money on cashapp, <span class="cashtag">£wotsitwhosit</span>, I very much appreciate it.</p>
       <div class="text-lower">
-        To get started: it takes two parameters from the route /data/.
-      <code>date</code> is the date in <code>YYYY-MM</code> format and 
-      <code>tier</code> is the tier eg: <code>gen8ou</code>. 
-      <br>
-      <br>
+        <p class="text-under">
+        To get started it takes two parameters, 
+        <code>date</code> in <code>YYYY-MM</code> format and a
+        <code>tier</code> eg: <code>gen8ou, gen3uu, gen7monotype</code>. <br>Default path is <code>/data/</code>.
         <ul>
           <li class="date">
             <label for="date">Date:</label>
@@ -42,16 +52,20 @@
           </li>
           <li class="tier">
             <label for="tier">Tier:</label>
-            <input type="text" name="tier" id="tier-input" placeholder="gen8ou">
+            <input type="text" name="tier" id="tier-input" placeholder="gen7ou">
           </li>
           <li>
             <button onclick="fetchAPI()" class="submit">Go</button>
             <button onclick="resetForm()" class="clear">Reset</button>
           </li>
         </ul>
-      Have fun.
+        </p>
+        <p class="text-under">
+        Have fun.
+        </p>
       </div>
     </div>
+  </div>
   </div>
 </body>
 </html>

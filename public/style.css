@@ -1,73 +1,138 @@
+/* 
+  Global Elements
+*/
+
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: 'dank mono';
-    font-size: 1.6rem;
-    font-style: italic;
-    height: 100%;
-    width: 100%;
-    background-color: #634b9b;
-    opacity: .7;
+  box-sizing: border-box;
+  font-family: 'dank mono';
+  font-size: 1.6rem;
+  font-style: italic;
+  height: 100%;
+  width: 100%;
+  background-color: #634b9b;
+  opacity: .7;
 }
 
 code {
-    font-family: monospace;
-    font-size: 1.3rem;
-    font-style: none;
+  font-family: monospace;
+  font-size: 1.3rem;
+  font-style: none;
 }
 
 a,
 a::before,
-a::after,
-a:visited {
-    font-style: none;
-    color: #c5eb5c
+a::after {
+  font-style: none;
+  text-decoration: none;
+  color: #c5eb5c
 }
 
-a:hover {
-    color: #333
+a:visited {
+  color: rgb(62, 0, 68);
+}
+
+a:hover{
+  color: #d332a1;
 }
 
 header {
-    margin:auto;
-    width: 50%;
-    padding: 5px;
-}
-
-.header-image{
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-}
-.greeting {
-    display: flex;
-    /* align-items: center;
-    justify-content: center; */
-    margin: 20px 35%;
-
-    color: #111;
-}
-
-.text-lower {
-    border: 2px solid #c5eb5c;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: #8971c0;
+  margin:auto;
+  width: 50%;
+  padding: 5px;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 li {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 3px;
+  margin-bottom: 5px;
+}
+
+/* 
+  classes 
+*/
+.header-image{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+.greeting {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 20px 35%;
+  color: #111;
+}
+
+/* bottom border decoration hack
+https://stackoverflow.com/questions/37117509/how-to-apply-this-effect-to-the-last-line-of-a-text
+*/
+.text {
+  border-bottom: 1px solid #acaf09;
+  position: relative;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.text::after {
+  content:"";
+  position: absolute;
+  width: 20000px;
+  height: 1px;
+  background: #634b9b;
+  top: 100%;
+  overflow: hidden;
+}
+
+.text-container {
+  border-left: 3px solid;
+  border-image: linear-gradient(rgba(249, 253, 1), rgb(137, 113, 192), rgb(99, 75, 155));
+  padding-left: 10px;
+  overflow: hidden; 
+
+}
+
+.text-container::before {
+  content: "";
+  height: 150%;
+  width: 150%;
+  background: linear-gradient(rgba(249, 253, 1) 70%, rgb(137, 113, 192) 80%, rgb(99, 75, 155));
+  animation: bgRotate 10s linear infinite;
+}
+
+.cashtag {
+  color:#c5eb5c
+}
+
+.text-lower {
+  border: 2px solid #c5eb5c;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #8971c0;
+}
+.text-under {
+  border-bottom: none;
+}
+
+
+@keyframes bgRotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
