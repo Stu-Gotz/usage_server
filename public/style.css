@@ -21,6 +21,9 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
 body {
   font-family: 'dank mono';
   font-size: 1.6rem;
