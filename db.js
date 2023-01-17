@@ -1,6 +1,7 @@
 const { Pool } = require("pg");
 const pg = require("pg");
-require("dotenv").config();
+
+require("dotenv").config(); //get credentials
 
 pg.defaults.ssl = true;
 

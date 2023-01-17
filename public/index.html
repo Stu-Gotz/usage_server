@@ -6,10 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Usage Stats</title>
+  <script src="main.js"></script>
   <!-- <script src="index.js"></script> -->
 </head>
 <body>
-  <div class="greeting">
+  <header class="header">
+    <a href="./index.html"><img class="header-image" src="../assets/images/pngegg.png" alt="koffing" height="150" width="150"></a>
+  </header>
+  <div class="greeting" id="main-text">
     <div class="text">
       Hello. This is a usage stats server for Smogon data. 
       Please don't hammer it, I'm paying out of pocket. 
@@ -22,16 +26,33 @@
       You'll have to set it up yourself but if you don't 
       know basic DB stuff, and want to be a better programmer 
       it's a good skill to have to at least be able to 
-      bullshit confidently. 
+      speak confidently in an interview. 
       <br>
       <br>
-      To get started: it takes two parameters from the route /data/.
+      <div class="text-lower">
+        To get started: it takes two parameters from the route /data/.
       <code>date</code> is the date in <code>YYYY-MM</code> format and 
       <code>tier</code> is the tier eg: <code>gen8ou</code>. 
       <br>
-      <a href="https://usage-server.herokuapp.com/data/2019-05/gen7ou">Get started here.</a>
       <br>
+      <form class="input" id="userForm">
+        <ul>
+          <li class="date">
+            <label for="date">Date:</label>
+            <input type="text" name="date" id="date-input" placeholder="2019-09">
+          </li>
+          <li class="tier">
+            <label for="tier">Tier:</label>
+            <input type="text" name="tier" id="tier-input" placeholder="gen8ou">
+          </li>
+          <li>
+            <button onclick="fetchAPI()" class="submit">Go</button>
+            <button onclick="resetForm()" class="clear">Reset</button>
+          </li>
+        </ul>
+      </form>
       Have fun.
+      </div>
     </div>
   </div>
 </body>

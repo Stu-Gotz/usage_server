@@ -37,11 +37,37 @@ a:visited {
 a:hover {
     color: #333
 }
+
+header {
+    margin:auto;
+    width: 50%;
+    padding: 5px;
+}
+
+.header-image{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
 .greeting {
     display: flex;
-    align-items: center;
-    justify-self: center;
-    margin: 5% 40%;
+    /* align-items: center;
+    justify-content: center; */
+    margin: 20px 35%;
 
     color: #111;
+}
+
+.text-lower {
+    border: 2px solid #c5eb5c;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #8971c0;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    text-decoration: none;
 }

@@ -2,16 +2,14 @@ const express = require('express');
 const app = express();
 const pool = require("./db"); //stores super secret db info
 const cors = require("cors");
-// const path = require("path");
+
 const PORT = process.env.PORT || 5500;
 
 // middleware
 app.use(cors());
 app.use(express.json()); // => req.body
 app.use(express.static('public'));
-// if (process.env.NODE_ENV === "production") {
-//     app.use(express.static(path.join(__dirname, "/")))
-// }
+
 /* ROUTES */
 
 // get the data
@@ -35,12 +33,6 @@ app.get("/data/:date/:tier", async (req, res) => {
 });
 // that's it. It only does a 'get'
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "/index.html"));
-// });
-
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}.`);
 });
-
-//Object.fromEntries(dlist.map(item => [item.pokemon, item]))
