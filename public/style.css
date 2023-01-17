@@ -7,18 +7,25 @@
 *::after {
   margin: 0;
   padding: 0;
+  
 }
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px;
+  background: none;
+  border: none;
 }
 
 body {
-  box-sizing: border-box;
   font-family: 'dank mono';
   font-size: 1.6rem;
   font-style: italic;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: #634b9b;
   opacity: .7;
@@ -54,6 +61,8 @@ header {
 
 ul {
   list-style: none;
+  display: flex;
+  flex-flow: column;
 }
 li {
   text-decoration: none;
@@ -64,6 +73,11 @@ p {
   margin-bottom: 5px;
 }
 
+footer {
+  text-align: center;
+  font-size: .95rem;
+  margin-right: 15px;
+}
 /* 
   classes 
 */
@@ -72,6 +86,7 @@ p {
   margin-left: auto;
   display: block;
 }
+
 .greeting {
   display: flex;
   /* align-items: center;
@@ -86,7 +101,7 @@ https://stackoverflow.com/questions/37117509/how-to-apply-this-effect-to-the-las
 .text {
   border-bottom: 1px solid #acaf09;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -102,10 +117,11 @@ https://stackoverflow.com/questions/37117509/how-to-apply-this-effect-to-the-las
 
 .text-container {
   border-left: 3px solid;
-  border-image: linear-gradient(rgba(249, 253, 1), rgb(137, 113, 192), rgb(99, 75, 155));
+  border-image: linear-gradient(rgba(249, 253, 1) 50%, rgb(137, 113, 192) 60%, hsl(258, 35%, 45%)80%) 1;
   padding-left: 10px;
   overflow: hidden; 
-
+  display: flex;
+  flex-direction: column;
 }
 
 .text-container::before {
@@ -113,24 +129,35 @@ https://stackoverflow.com/questions/37117509/how-to-apply-this-effect-to-the-las
   height: 150%;
   width: 150%;
   background: linear-gradient(rgba(249, 253, 1) 70%, rgb(137, 113, 192) 80%, rgb(99, 75, 155));
-  animation: bgRotate 10s linear infinite;
+  animation: 10s infinite linear bgRotate;
 }
 
 .cashtag {
   color:#c5eb5c
 }
 
+.date, .tier, .list-btns {
+  align-self: center;
+}
+
+
 .text-lower {
   border: 2px solid #c5eb5c;
   border-radius: 20px;
   padding: 10px;
   background-color: #8971c0;
+  display: flex;
+  flex-direction: column;
 }
 .text-under {
+  margin-top: 4px;
   border-bottom: none;
+  text-align: center;
 }
 
-
+/* 
+  Keyframes
+*/
 @keyframes bgRotate {
   to {
     transform: rotate(360deg);
