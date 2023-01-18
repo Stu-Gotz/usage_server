@@ -119,20 +119,17 @@ https://stackoverflow.com/questions/37117509/how-to-apply-this-effect-to-the-las
 }
 
 .text-container {
-  border-left: 3px solid;
-  border-image: linear-gradient(rgba(249, 253, 1) 50%, rgb(137, 113, 192) 60%, hsl(258, 35%, 45%)80%) 1;
-  padding-left: 10px;
-  overflow: hidden; 
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
-.text-container::before {
-  content: "";
-  height: 150%;
-  width: 150%;
-  background: linear-gradient(rgba(249, 253, 1) 70%, rgb(137, 113, 192) 80%, rgb(99, 75, 155));
-  animation: 10s infinite linear bgRotate;
+.wrapper {
+  border-left: 3px solid;
+  border-image: linear-gradient(rgba(249, 253, 1) 50%, rgb(137, 113, 192) 60%, hsl(258, 35%, 45%)80%) 1;
+  border-top-left-radius: 50px;
+  padding-left: 10px;
+  overflow: visible; 
+  display: flex;
+  flex-direction: column;
 }
 
 .cashtag {
@@ -161,8 +158,3 @@ https://stackoverflow.com/questions/37117509/how-to-apply-this-effect-to-the-las
 /* 
   Keyframes
 */
-@keyframes bgRotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
