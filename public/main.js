@@ -34,11 +34,17 @@ async function fetchAPI() {
   //   console.log(`${key}: ${value}`);
   // }
   const results = new Array();
+  redirectToResults();
   results.push(data.data);
   console.log(results)
+
   return results
 }
 
+function redirectToResults(){
+  location.href = "http://127.0.0.1:5501/public/";
+
+};
 
 function resetForm(){
   document.getElementById("date-input").value = getMonth();
